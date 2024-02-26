@@ -24,7 +24,8 @@ def proyectos():
 def proyecto(code):
     # Get the names of all the images of the project
     # Get the images folder path and change os path
-    path = f"/static/images/{code}"
+    print(os.getc)
+    path = f"app/static/images/{code}"
     os.chdir(path)
     
     print(os.listdir())
