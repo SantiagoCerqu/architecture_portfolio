@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block body %}
+
+    <div class="container - lg">
+        <div class="row">
+            {% for project_code in df.index %}
+                    <div class="col-12 col-lg-3 col-md-6 col-sm-12" style="margin-bottom: 10px;">
+                        <div class="card" style="width: 17.5rem;">
+                            <img src="/static/images/miniaturas/{{ df['thumbnail'][project_code] }}" class="card-img-top ByN" alt="...">
+                            <div class="card-body">
+                            <h5 class="card-title">{{ df['name'][project_code] }}</h5>
+                            <p class="card-text">{{ df['description'][project_code] }}</p>
+                            <a href="/proyecto/{{ project_code }}" class="btn btn-dark">Ver Proyecto</a>
+                            </div>
+                        </div>
+                    </div>
+            {% endfor %}
+        </div>
+    </div>
+    
+
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <div class="container">
+        <div>
+            <h3> {{ df['name'][pr_code] }} </h3>
+            {{ df['description'][pr_code] }}
+            <br>
+            <br>
+            <h6>Softwares: {{ df['softwares'][pr_code] }}</h6>
+            <br>
+            <br>
+            <div >
+                {% for image in images %}
+                    <img class="img-fluid" src="{{ url_for('static', filename=image) }}" alt="{{ image }}">
+                    <br>
+                    <br>
+                {%endfor%}
+            </div>
+        </div>
+
+    </div>
+{% endblock %}

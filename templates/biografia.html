@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <div class="container text-center">
+        <div class="row align-items-center">
+            <div class="col-12 col-lg-6" style="padding: 10px;">
+                <img src="{{ url_for('static', filename='/images/personal/Foto Personal MOD.jpg') }}" width="40%" height="40%">
+            </div>
+            <div class="col-12 col-lg-6" style="padding: 10px; text-align: justify; text-justify: inter-word;">
+                <p>Arquitecto de la Universidad de los Andes, con intereses en nuevas tecnologías de diseño y construcción enfocadas en la fabricación,
+                    materialidad y visualización 3D. Con conocimiento en herramientas de diseño análogas y computacionales.
+                    Capaz de generar ideas y respuestas a un proyecto basadas en el análisis, la empatía y el respeto por las personas y el lugar.</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}
