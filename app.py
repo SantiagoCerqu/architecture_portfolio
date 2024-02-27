@@ -24,11 +24,10 @@ def proyectos():
 def proyecto(code):
     # Get the names of all the images of the project
     # Get the images folder path and change os path
-    path = f"app/static/images/{code}"
-    os.chdir(path)
     
-    print(os.listdir())
+    path = os.getcwd()
+    img_path = f"{path}/static/images/{code}"
 
-    images = [f"images/{code}/{image}" for image in os.listdir() if image.endswith(".jpg") or image.endswith(".png") or image.endswith(".jpeg")]
+    images = [f"images/{code}/{image}" for image in os.listdir(img_path) if image.endswith(".jpg") or image.endswith(".png") or image.endswith(".jpeg")]
 
     return render_template("proyecto.html", df =df, pr_code=code, images=images)
